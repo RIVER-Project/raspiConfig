@@ -91,4 +91,5 @@ def stopRover():
 #  }
 
 while True:
+    stopRover()
     kit.servo[middle_right180] = 180
