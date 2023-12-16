@@ -57,7 +57,7 @@ def stopRover():
 
 def perform_operation(operator):
  if operator in operations:
-  return operations[operator]
+  operations[operator]
 
 ###360
 ##right -1
