@@ -77,7 +77,7 @@ middle_right180 = 8
 middle_left180 = 9
 rear_right180 = 10
 rear_left180 = 11
-k = 0
+k = 1
 
 for i in range(6,12):
   kit.servo[i].set_pulse_width_range(servo180_1, servo180_2)
@@ -89,6 +89,5 @@ operations = {
   '0': stopRover()
  }
 while True:
- k = int(input("Enter an integer: "))
- perform_operation(k)
-
+ for i in range(6, 12):
+  controlM(i)
