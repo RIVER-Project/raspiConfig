@@ -7,6 +7,7 @@ from adafruit_servokit import ServoKit
 kit = ServoKit(channels=16)
 
 back_right360 = 5
+front_right360 = 0
 
 
 
@@ -15,5 +16,6 @@ for i in range(6,12):
 
 while True:
   kit.continuous_servo[back_right360].throttle = 1
+  kit.continuous_servo[back_right360].throttle = 0.03
   # kit.continuous_servo[front_left360].throttle = 1
   # kit.servo[front_right180].angle = 90
