@@ -92,8 +92,7 @@ def stopRover():
 #   '0': stopRover()
 #  }
 
-while True:
-    stopRover()
-    for i in range(6, 12):
-     kit.servo[i].angle = 90
-    krabWalk()
+stopRover()
+for i in range(6, 12):
+ kit.servo[i].angle = 90
+krabWalk()
