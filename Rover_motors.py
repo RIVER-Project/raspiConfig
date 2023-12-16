@@ -93,4 +93,4 @@ operations = {
   '0': stopRover()
  }
 while True:
-    krabWalk()
+    kit.servo(rear_right180).angle = 180
