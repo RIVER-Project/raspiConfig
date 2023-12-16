@@ -89,5 +89,4 @@ operations = {
   '0': stopRover()
  }
 while True:
- for i in range(6, 12):
-  controlM(i)
+ krabWalk()
