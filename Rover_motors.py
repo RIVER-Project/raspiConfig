@@ -76,7 +76,7 @@ k = 0
 
 for i in range(6,12):
   kit.servo[i].set_pulse_width_range(servo180_1, servo180_2)
- operations = {
+operations = {
   '1': forwardFull(),
   '2': forwardHalf(),
   '3': krabWalk(),
