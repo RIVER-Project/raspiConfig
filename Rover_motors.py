@@ -8,6 +8,7 @@ kit = ServoKit(channels=16)
 
 
 front_right360 = 0
+front_left360 = 1
 
 
 
@@ -16,6 +17,7 @@ for i in range(6,12):
 
 while True:
   kit.continuous_servo[front_right360].throttle = -1
+  kit.continuous_servo[front_left360].throttle = 1
 
   # kit.continuous_servo[front_left360].throttle = 1
   # kit.servo[front_right180].angle = 90
