@@ -94,4 +94,4 @@ def stopRover():
 
 while True:
     stopRover()
-    kit.servo[rear_right180].angle = 90
+    kit.servo[rear_right180].angle = 180
