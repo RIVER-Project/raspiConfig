@@ -24,6 +24,9 @@ middle_left180 = 9
 rear_right180 = 10
 rear_left180 = 11
 
+for i in range(6, 12):
+    kit.servo[i].set_pulse_width_range(servo180_1, servo180_2)
+
 def controlM(a):
  kit.servo[a].angle = 0
  time.sleep(0.5)
@@ -79,8 +82,7 @@ def stopRover():
 #  if operator in operations:
 #   operations[operator]
 
- for i in range(6,12):
-   kit.servo[i].set_pulse_width_range(servo180_1, servo180_2)
+
 
 # operations = {
 #   # '1': forwardFull(),
@@ -92,4 +94,4 @@ def stopRover():
 
 while True:
     stopRover()
-    kit.servo[middle_right180].angle = 180
+    kit.servo[rear_right180].angle = 90
