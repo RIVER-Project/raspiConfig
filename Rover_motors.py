@@ -92,7 +92,20 @@ def stopRover():
 #   '0': stopRover()
 #  }
 
-stopRover()
-for i in range(6, 12):
- kit.servo[i].angle = 90
-krabWalk()
+def main():
+    for i in (6, 12):
+        kit.servo[i].angle = 180
+        time.sleep(1)
+    time.sleep(2)
+    kit.continuous_servo[front_right360].throttle = -0.5
+    kit.continuous_servo[front_left360].throttle = 0.5
+    kit.continuous_servo[middle_right360].throttle = -0.5
+    kit.continuous_servo[middle_left360].throttle = 0.5
+    kit.continuous_servo[rear_right360].throttle = -0.5
+    kit.continuous_servo[rear_left360].throttle = 0.5
+
+# Using the special variable
+# __name__
+if __name__ == "__main__":
+    main()
+
