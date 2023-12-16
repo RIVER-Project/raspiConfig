@@ -7,7 +7,7 @@ from adafruit_servokit import ServoKit
 kit = ServoKit(channels=16)
 
 front_right360 = 0
-front_right180 =
+front_right180 = 5
 
 
 
