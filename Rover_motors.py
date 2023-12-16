@@ -6,6 +6,16 @@ import time
 from adafruit_servokit import ServoKit
 kit = ServoKit(channels=16)
 
+def controlM(a):
+ kit.servo[a].angle = 0
+ time.sleep(0.5)
+ kit.servo[a].angle = 90
+ time.sleep(0.5)
+ kit.servo[a].angle = 180
+ time.sleep(0.5)
+ kit.servo[a].angle = 90
+ time.sleep(0.5)
+
 ###360
 ##right -1
 front_right360 = 0
@@ -19,6 +29,7 @@ rear_left360 = 5
 ###180
 
 front_right180 = 6
+front_left180 = 7
 k = 0
 
 for i in range(6,12):
@@ -35,14 +46,8 @@ while k:
   #k = int(input("Enter an integer: "))
 
 while True:
- kit.servo[front_right180].angle = 0
- time.sleep(0.5)
- kit.servo[front_right180].angle = 90
- time.sleep(0.5)
- kit.servo[front_right180].angle = 180
- time.sleep(0.5)
- kit.servo[front_right180].angle = 90
- time.sleep(0.5)
+ #controlM(front_right180)
+ controlM(front_left180)
 
 
 for i in range(6):
