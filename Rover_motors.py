@@ -15,7 +15,6 @@ middle_left360 = 3
 rear_right360 = 4
 rear_left360 = 5
 
-
 ###180
 
 front_right180 = 6
@@ -80,11 +79,9 @@ def perform_operation(operator):
  if operator in operations:
   operations[operator]
 
-
-k = 1
-
 for i in range(6,12):
   kit.servo[i].set_pulse_width_range(servo180_1, servo180_2)
+
 operations = {
   '1': forwardFull(),
   '2': forwardHalf(),
@@ -92,5 +89,3 @@ operations = {
   '4': backWard(),
   '0': stopRover()
  }
-while True:
-    kit.servo[rear_right180].angle = 90
