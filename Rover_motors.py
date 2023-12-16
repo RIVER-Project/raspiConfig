@@ -21,7 +21,7 @@ input(k)
 while k:
   kit.continuous_servo[front_right360].throttle = -1
   kit.continuous_servo[front_left360].throttle = 1
-  kit.continuous_servo[middle_right360].throttle = 1
+  kit.continuous_servo[middle_right360].throttle = -1
 
 for i in range(2):
  kit.continuous_servo[i].throttle = 0.03
