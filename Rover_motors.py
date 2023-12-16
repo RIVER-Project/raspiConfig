@@ -93,4 +93,4 @@ operations = {
   '0': stopRover()
  }
 while True:
-    kit.servo(rear_right180).angle = 180
+    kit.servo[rear_right180].angle = 180
