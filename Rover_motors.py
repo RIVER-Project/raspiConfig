@@ -54,6 +54,11 @@ def stopRover():
  for i in range(6):
   kit.continuous_servo[i].throttle = 0.03
 
+
+def perform_operation(operator):
+ if operator in operations:
+  return operations[operator]
+
 ###360
 ##right -1
 front_right360 = 0
@@ -84,4 +89,6 @@ operations = {
   '0': stopRover()
  }
 while True:
- controlM(rear_right180)
+ num = int(input("Enter an integer: "))
+ perform_operation(num)
+
