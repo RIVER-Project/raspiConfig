@@ -36,12 +36,13 @@ def krabWalk():
   for i in (6,12):
    kit.servo[i].angle = 180
    time.sleep(1)
-  kit.continuous_servo[front_right360].throttle = -0.5
-  kit.continuous_servo[front_left360].throttle = 0.5
-  kit.continuous_servo[middle_right360].throttle = -0.5
-  kit.continuous_servo[middle_left360].throttle = 0.5
-  kit.continuous_servo[rear_right360].throttle = -0.5
-  kit.continuous_servo[rear_left360].throttle = 0.5
+time.sleep(2)
+kit.continuous_servo[front_right360].throttle = -0.5
+kit.continuous_servo[front_left360].throttle = 0.5
+kit.continuous_servo[middle_right360].throttle = -0.5
+kit.continuous_servo[middle_left360].throttle = 0.5
+kit.continuous_servo[rear_right360].throttle = -0.5
+kit.continuous_servo[rear_left360].throttle = 0.5
 
 def backWard():
  kit.continuous_servo[front_right360].throttle = 1
@@ -90,5 +91,4 @@ operations = {
   '0': stopRover()
  }
 while True:
-    stopRover()
-    kit.servo[middle_left180].angle = 180
+    krabWalk()
