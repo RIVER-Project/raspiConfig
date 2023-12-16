@@ -32,6 +32,7 @@ front_right180 = 6
 front_left180 = 7
 middle_right180 = 8
 middle_left180 = 9
+rear_right180 = 10
 k = 0
 
 for i in range(6,12):
@@ -50,8 +51,9 @@ while k:
 while True:
  #controlM(front_right180)
  #controlM(front_left180)
- controlM(middle_right180)
- controlM(middle_left180)
+ #controlM(middle_right180)
+ #controlM(middle_left180)
+ controlM(rear_right180)
 
 for i in range(6):
  kit.continuous_servo[i].throttle = 0.03
