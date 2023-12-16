@@ -35,6 +35,7 @@ def forwardHalf():
 def krabWalk():
   for i in (6,12):
    kit.servo[i].angle = 180
+   time.sleep(1)
   kit.continuous_servo[front_right360].throttle = -0.5
   kit.continuous_servo[front_left360].throttle = 0.5
   kit.continuous_servo[middle_right360].throttle = -0.5
