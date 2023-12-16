@@ -12,6 +12,7 @@ front_left360 = 1
 middle_right360 = 2
 middle_left360 = 3
 rear_right360 = 4
+rear_left360 = 5
 
 k = 1
 
@@ -26,8 +27,9 @@ while k:
   kit.continuous_servo[middle_right360].throttle = -1
   kit.continuous_servo[middle_left360].throttle = 1
   kit.continuous_servo[rear_right360].throttle = -1
+  kit.continuous_servo[rear_left360].throttle = 1
   k = int(input("Enter an integer: "))
-for i in range(4):
+for i in range(6):
  kit.continuous_servo[i].throttle = 0.03
 
   # kit.continuous_servo[front_left360].throttle = 1
