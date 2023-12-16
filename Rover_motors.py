@@ -89,6 +89,6 @@ operations = {
   '0': stopRover()
  }
 while True:
- num = int(input("Enter an integer: "))
- perform_operation(num)
+ k = int(input("Enter an integer: "))
+ perform_operation(k)
 
