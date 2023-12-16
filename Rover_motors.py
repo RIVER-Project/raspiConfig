@@ -82,10 +82,10 @@ def stopRover():
 # for i in range(6,12):
 #   kit.servo[i].set_pulse_width_range(servo180_1, servo180_2)
 
-# operations = {
-#   '1': forwardFull(),
-#   '2': forwardHalf(),
-#   '3': krabWalk(),
-#   '4': backWard(),
-#   '0': stopRover()
-#  }
+operations = {
+  '1': forwardFull(),
+  '2': forwardHalf(),
+  '3': krabWalk(),
+  '4': backWard(),
+  '0': stopRover()
+ }
