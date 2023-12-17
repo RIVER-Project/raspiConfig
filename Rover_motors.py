@@ -68,12 +68,12 @@ def reverseKrab():
    kit.servo[i].angle = 90
    time.sleep(0.2)
 def backWard():
- kit.continuous_servo[front_right360].throttle = 1
- kit.continuous_servo[front_left360].throttle = -1
- kit.continuous_servo[middle_right360].throttle = 1
- kit.continuous_servo[middle_left360].throttle = -1
- kit.continuous_servo[rear_right360].throttle = 1
- kit.continuous_servo[rear_left360].throttle = -1
+ kit.continuous_servo[front_right360].throttle = -1
+ kit.continuous_servo[front_left360].throttle = 1
+ kit.continuous_servo[middle_right360].throttle = -1
+ kit.continuous_servo[middle_left360].throttle = 1
+ kit.continuous_servo[rear_right360].throttle = -1
+ kit.continuous_servo[rear_left360].throttle = 1
 
 def stopRover():
  for i in range(6):
@@ -86,7 +86,7 @@ def main():
  for i in range(6, 12):
   kit.servo[i].angle = 180
   time.sleep(0.3)
- kit.servo[middle_right180] = 92
+ kit.servo[middle_right180].angle = 92
  # while True:
  #  try:
  #   choice = int(input("Enter a number :"))
