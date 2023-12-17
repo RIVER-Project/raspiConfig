@@ -77,27 +77,24 @@ def stopRover():
  for i in range(6):
   kit.continuous_servo[i].throttle = 0.03
 
-
-# def perform_operation(operator):
-#  if operator in operations:
-#   operations[operator]
-
-
-
-# operations = {
-#   # '1': forwardFull(),
-#   # '2': forwardHalf(),
-#   '3': krabWalk(),
-#   '4': backWard(),
-#   '0': stopRover()
-#  }
-
 def main():
- stopRover()
- for i in range(6, 12):
-  kit.servo[i].angle = 90
-  time.sleep(1)
-
+ while True:
+  try:
+   choice = int(input("Enter a number :"))
+   if choice == 1:
+    forwardFull()
+   elif choice == 2:
+    forwardHalf()
+   elif choice == 3:
+    krabWalk()
+   elif choice == 4:
+    backWard()
+   elif choice == 5:
+    stopRover()
+   else:
+    print("Exiting the program.")
+  except ValueError:
+        print("Invalid input. Please enter an integer.")
 
 if __name__ == "__main__":
     main()
