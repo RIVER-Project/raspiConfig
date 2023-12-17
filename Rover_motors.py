@@ -84,7 +84,7 @@ def circles():
 
 def main():
  for i in range(6, 12):
-  kit.servo[i].angle = 90
+  kit.servo[i].angle = 180
   kit.servo[middle_right180] = 92
  # while True:
  #  try:
