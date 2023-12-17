@@ -86,7 +86,7 @@ def main():
  for i in range(6, 12):
   kit.servo[i].angle = 180
   time.sleep(0.3)
- kit.servo[middle_right180].angle = 92
+ kit.servo[middle_right180].angle = 87
  # while True:
  #  try:
  #   choice = int(input("Enter a number :"))
