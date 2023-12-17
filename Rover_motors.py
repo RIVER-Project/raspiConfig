@@ -94,8 +94,8 @@ def stopRover():
 
 def main():
  stopRover()
- for i in range(5, 12):
-  kit.servo[i].angle = 180
+ for i in range(6, 12):
+  kit.servo[i].angle = 0
   time.sleep(1)
 
 
