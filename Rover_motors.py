@@ -39,20 +39,20 @@ def controlM(a):
  time.sleep(0.5)
 
 def forwardFull():
- kit.continuous_servo[front_right360].throttle = -1
- kit.continuous_servo[front_left360].throttle = 1
- kit.continuous_servo[middle_right360].throttle = -1
- kit.continuous_servo[middle_left360].throttle = 1
- kit.continuous_servo[rear_right360].throttle = -1
- kit.continuous_servo[rear_left360].throttle = 1
+ kit.continuous_servo[front_right360].throttle = 1
+ kit.continuous_servo[front_left360].throttle = -1
+ kit.continuous_servo[middle_right360].throttle = 1
+ kit.continuous_servo[middle_left360].throttle = -1
+ kit.continuous_servo[rear_right360].throttle = 1
+ kit.continuous_servo[rear_left360].throttle = -1
 
 def forwardHalf():
- kit.continuous_servo[front_right360].throttle = -0.5
- kit.continuous_servo[front_left360].throttle = 0.5
- kit.continuous_servo[middle_right360].throttle = -0.5
- kit.continuous_servo[middle_left360].throttle = 0.5
- kit.continuous_servo[rear_right360].throttle = -0.5
- kit.continuous_servo[rear_left360].throttle = 0.5
+ kit.continuous_servo[front_right360].throttle = 0.5
+ kit.continuous_servo[front_left360].throttle = -0.5
+ kit.continuous_servo[middle_right360].throttle = 0.5
+ kit.continuous_servo[middle_left360].throttle = -0.5
+ kit.continuous_servo[rear_right360].throttle = 0.5
+ kit.continuous_servo[rear_left360].throttle = -0.5
 
 def krabWalk():
   stopRover()
@@ -60,7 +60,6 @@ def krabWalk():
   for i in range(6,12):
    kit.servo[i].angle = 180
    time.sleep(0.2)
-  time.sleep(1)
 
 def reverseKrab():
   stopRover()
