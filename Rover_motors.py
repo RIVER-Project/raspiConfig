@@ -8,21 +8,22 @@ kit = ServoKit(channels=16)
 
 ###360
 ##right -1
-front_right360 = 0
-front_left360 = 1
-middle_right360 = 2
-middle_left360 = 3
-rear_right360 = 4
-rear_left360 = 5
+
+front_left360 = 0
+front_right360 = 1
+middle_left360 = 2
+middle_right360 = 3
+rear_left360 = 4
+rear_right360 = 5
 
 ###180
 
-front_right180 = 6
-front_left180 = 7
-middle_right180 = 8
-middle_left180 = 9
-rear_right180 = 10
-rear_left180 = 11
+front_left180 = 6
+front_right180 = 7
+middle_left180 = 8
+middle_right180 = 9
+rear_left180 = 10
+rear_right180 = 11
 
 for i in range(6, 12):
     kit.servo[i].set_pulse_width_range(servo180_1, servo180_2)
@@ -60,12 +61,6 @@ def krabWalk():
    kit.servo[i].angle = 180
    time.sleep(0.2)
   time.sleep(1)
-  kit.continuous_servo[front_right360].throttle = -0.5
-  kit.continuous_servo[front_left360].throttle = 0.5
-  kit.continuous_servo[middle_right360].throttle = -0.5
-  kit.continuous_servo[middle_left360].throttle = 0.5
-  kit.continuous_servo[rear_right360].throttle = -0.5
-  kit.continuous_servo[rear_left360].throttle = 0.5
 
 def reverseKrab():
   stopRover()
