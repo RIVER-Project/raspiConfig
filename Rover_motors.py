@@ -84,22 +84,17 @@ def circles():
  kit.servo[front_right360] = 125
 
 def steer(angle):
-
- while  kit.continuous_servo[front_right360].throttle == 1 or kit.continuous_servo[front_left360].throttle == -1:
      kit.servo[front_right180] = angle
      kit.servo[front_left180] = angle
-
-
 
 def main():
  while True:
   try:
-   choice = int(input("Option:\n1 Forward full\n2.Steer(angle)\n3.Forward Half\n4.Krab walk\n5.Reverse krab\n6.Backward\n7.Stop"))
+   choice = int(input("Option:\n1 Forward full\n2.Steer(angle)\n3.Forward Half\n4.Krab walk\n5.Reverse krab\n6.Backward\n7.Stop\n"))
    if choice == 1:
     forwardFull()
    elif choice == 2:
-    print("Choose angle: ")
-    angle = int(input)
+    angle = int(input("Choose angle: "))
     steer(angle)
    elif choice == 3:
     forwardHalf()
