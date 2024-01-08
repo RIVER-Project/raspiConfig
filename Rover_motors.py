@@ -99,7 +99,7 @@ def main():
     while exitSteer == 1:
         angle = int(input("Choose angle: "))
         steer(angle)
-        exitSteer = int(input("\nPress 9 to exit steering mode\n"))
+        exitSteer = int(input("\nPress 1 to continue or 9 to exit steering mode\n"))
         if exitSteer == 9:
             for i in range(6, 12):
                 kit.servo[i].angle = 90
