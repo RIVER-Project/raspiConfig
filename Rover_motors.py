@@ -98,14 +98,18 @@ def main():
    if choice == 1:
     forwardFull()
    elif choice == 2:
-    forwardHalf()
+    print("Choose angle: ")
+    angle = int(input)
+    steer(angle)
    elif choice == 3:
-    krabWalk()
+    forwardHalf()
    elif choice == 4:
-    reverseKrab()
+    krabWalk()
    elif choice == 5:
-    backWard()
+    reverseKrab()
    elif choice == 6:
+    backWard()
+   elif choice == 7:
     stopRover()
    else:
     print("Exiting the program.")
