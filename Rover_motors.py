@@ -4,6 +4,7 @@ servo180_2 = 2590
 
 import time
 from adafruit_servokit import ServoKit
+from pynput.keyboard import Key, Listener
 kit = ServoKit(channels=16)
 
 ###360
@@ -39,12 +40,14 @@ def controlM(a):
  time.sleep(0.5)
 
 def forwardFull():
- kit.continuous_servo[front_right360].throttle = 1
- kit.continuous_servo[front_left360].throttle = -1
- kit.continuous_servo[middle_right360].throttle = 1
- kit.continuous_servo[middle_left360].throttle = -1
- kit.continuous_servo[rear_right360].throttle = 1
- kit.continuous_servo[rear_left360].throttle = -1
+
+ while key.char == ('w'):
+  kit.continuous_servo[front_right360].throttle = 1
+  kit.continuous_servo[front_left360].throttle = -1
+  kit.continuous_servo[middle_right360].throttle = 1
+  kit.continuous_servo[middle_left360].throttle = -1
+  kit.continuous_servo[rear_right360].throttle = 1
+  kit.continuous_servo[rear_left360].throttle = -1
 
 def forwardHalf():
  kit.continuous_servo[front_right360].throttle = 0.5
@@ -66,7 +69,7 @@ def reverseKrab():
   time.sleep(1)
   for i in range(6,12):
    kit.servo[i].angle = 90
-   time.sleep(0.2)
+   #time.sleep(0.2)
 def backWard():
  kit.continuous_servo[front_right360].throttle = -1
  kit.continuous_servo[front_left360].throttle = 1
@@ -81,6 +84,10 @@ def stopRover():
 
 def circles():
  kit.servo[front_right360] = 125
+
+def steer(angle):
+ while  kit.continuous_servo[front_right360].throttle == 1 or kit.continuous_servo[front_left360].throttle == -1:
+   ds
 
 def main():
  while True:
