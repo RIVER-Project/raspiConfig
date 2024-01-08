@@ -95,12 +95,15 @@ def main():
    if choice == 1:
     forwardFull()
    elif choice == 2:
-    exitSteer = 9;
-    while exitSteer == 9:
-        exitSteer = int(input("\nPress 9 to continue or any other key to exit steering mode\n"))
+    exitSteer = 0;
+    while exitSteer == 0:
         angle = int(input("Choose angle: "))
         steer(angle)
-    reverseKrab()
+        exitSteer = int(input("\nPress 9 to exit steering mode\n"))
+        if exitSteer == 9:
+            for i in range(6, 12):
+                kit.servo[i].angle = 90
+
    elif choice == 3:
     forwardHalf()
    elif choice == 4:
