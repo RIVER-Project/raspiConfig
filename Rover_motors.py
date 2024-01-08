@@ -40,8 +40,6 @@ def controlM(a):
  time.sleep(0.5)
 
 def forwardFull():
-
-
  while key.char == "w":
   kit.continuous_servo[front_right360].throttle = 1
   kit.continuous_servo[front_left360].throttle = -1
