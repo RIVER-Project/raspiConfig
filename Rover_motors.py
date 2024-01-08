@@ -59,7 +59,7 @@ def krabWalk():
   time.sleep(1)
   for i in range(6,12):
    kit.servo[i].angle = 180
-   time.sleep(0.2)
+   # time.sleep(0.2)
 
 def reverseKrab():
   stopRover()
