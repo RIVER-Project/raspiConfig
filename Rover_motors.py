@@ -40,13 +40,18 @@ def controlM(a):
  time.sleep(0.5)
 
 def forwardFull():
-  while keyboard.is_pressed('w'):
+ k = 1
+ while k:
+  if keyboard.is_pressed('w'):
       kit.continuous_servo[front_right360].throttle = 1
       kit.continuous_servo[front_left360].throttle = -1
       kit.continuous_servo[middle_right360].throttle = 1
       kit.continuous_servo[middle_left360].throttle = -1
       kit.continuous_servo[rear_right360].throttle = 1
       kit.continuous_servo[rear_left360].throttle = -1
+  if keyboard.is_pressed('p'):
+      k = 0;
+
 
 def forwardHalf():
  kit.continuous_servo[front_right360].throttle = 0.5
@@ -89,25 +94,26 @@ def steer(angle):
    ds
 
 def main():
- while True:
-  try:
-   choice = int(input("Enter a number :"))
-   if choice == 1:
-    forwardFull()
-   elif choice == 2:
-    forwardHalf()
-   elif choice == 3:
-    krabWalk()
-   elif choice == 4:
-    reverseKrab()
-   elif choice == 5:
-    backWard()
-   elif choice == 6:
-    stopRover()
-   else:
-    print("Exiting the program.")
-  except ValueError:
-        print("Invalid input. Please enter an integer.")
+    forwardFull();
+ # while True:
+ #  try:
+ #   choice = int(input("Enter a number :"))
+ #   if choice == 1:
+ #    forwardFull()
+ #   elif choice == 2:
+ #    forwardHalf()
+ #   elif choice == 3:
+ #    krabWalk()
+ #   elif choice == 4:
+ #    reverseKrab()
+ #   elif choice == 5:
+ #    backWard()
+ #   elif choice == 6:
+ #    stopRover()
+ #   else:
+ #    print("Exiting the program.")
+ #  except ValueError:
+ #        print("Invalid input. Please enter an integer.")
 
 if __name__ == "__main__":
     main()
