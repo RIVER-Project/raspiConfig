@@ -40,8 +40,7 @@ def controlM(a):
  time.sleep(0.5)
 
 def forwardFull():
- while True:
-  if keyboard.read_key() == "w":
+  while keyboard.is_pressed('w'):
       kit.continuous_servo[front_right360].throttle = 1
       kit.continuous_servo[front_left360].throttle = -1
       kit.continuous_servo[middle_right360].throttle = 1
