@@ -84,8 +84,8 @@ def circles():
  kit.servo[front_right360] = 125
 
 def steer(angle):
-     kit.servo[front_right180] = angle
-     kit.servo[front_left180] = angle
+     kit.servo[front_right180].angle = angle
+     kit.servo[front_left180].angle = angle
 
 def main():
  while True:
