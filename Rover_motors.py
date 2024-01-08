@@ -4,7 +4,6 @@ servo180_2 = 2590
 
 import time
 from adafruit_servokit import ServoKit
-from pynput.keyboard import Listener
 kit = ServoKit(channels=16)
 
 ###360
