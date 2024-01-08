@@ -95,8 +95,8 @@ def main():
    if choice == 1:
     forwardFull()
    elif choice == 2:
-    exitSteer = 0;
-    while exitSteer == 0:
+    exitSteer = 1;
+    while exitSteer == 1:
         angle = int(input("Choose angle: "))
         steer(angle)
         exitSteer = int(input("\nPress 9 to exit steering mode\n"))
