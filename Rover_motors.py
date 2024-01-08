@@ -4,7 +4,6 @@ servo180_2 = 2590
 
 import time
 from adafruit_servokit import ServoKit
-import keyboard
 kit = ServoKit(channels=16)
 
 ###360
@@ -40,17 +39,12 @@ def controlM(a):
  time.sleep(0.5)
 
 def forwardFull():
- k = 1
- while k:
-  if keyboard.is_pressed('w'):
-      kit.continuous_servo[front_right360].throttle = 1
-      kit.continuous_servo[front_left360].throttle = -1
-      kit.continuous_servo[middle_right360].throttle = 1
-      kit.continuous_servo[middle_left360].throttle = -1
-      kit.continuous_servo[rear_right360].throttle = 1
-      kit.continuous_servo[rear_left360].throttle = -1
-  if keyboard.is_pressed('p'):
-      k = 0;
+ kit.continuous_servo[front_right360].throttle = 1
+ kit.continuous_servo[front_left360].throttle = -1
+ kit.continuous_servo[middle_right360].throttle = 1
+ kit.continuous_servo[middle_left360].throttle = -1
+ kit.continuous_servo[rear_right360].throttle = 1
+ kit.continuous_servo[rear_left360].throttle = -1
 
 
 def forwardHalf():
@@ -90,30 +84,33 @@ def circles():
  kit.servo[front_right360] = 125
 
 def steer(angle):
+
  while  kit.continuous_servo[front_right360].throttle == 1 or kit.continuous_servo[front_left360].throttle == -1:
-   ds
+     kit.servo[front_right180] = angle
+     kit.servo[front_left180] = angle
+
+
 
 def main():
-    forwardFull();
- # while True:
- #  try:
- #   choice = int(input("Enter a number :"))
- #   if choice == 1:
- #    forwardFull()
- #   elif choice == 2:
- #    forwardHalf()
- #   elif choice == 3:
- #    krabWalk()
- #   elif choice == 4:
- #    reverseKrab()
- #   elif choice == 5:
- #    backWard()
- #   elif choice == 6:
- #    stopRover()
- #   else:
- #    print("Exiting the program.")
- #  except ValueError:
- #        print("Invalid input. Please enter an integer.")
+ while True:
+  try:
+   choice = int(input("Option:\n1 Forward full\n2.Steer(angle)\n3.Forward Half\n4.Krab walk\n5.Reverse krab\n6.Backward\n7.Stop"))
+   if choice == 1:
+    forwardFull()
+   elif choice == 2:
+    forwardHalf()
+   elif choice == 3:
+    krabWalk()
+   elif choice == 4:
+    reverseKrab()
+   elif choice == 5:
+    backWard()
+   elif choice == 6:
+    stopRover()
+   else:
+    print("Exiting the program.")
+  except ValueError:
+        print("Invalid input. Please enter an integer.")
 
 if __name__ == "__main__":
     main()
