@@ -4,7 +4,7 @@ servo180_2 = 2590
 
 import time
 from adafruit_servokit import ServoKit
-from pynput.keyboard import Key, Listener
+import keyboard
 kit = ServoKit(channels=16)
 
 ###360
@@ -40,7 +40,6 @@ def controlM(a):
  time.sleep(0.5)
 
 def forwardFull():
- while Key.char == "w":
   kit.continuous_servo[front_right360].throttle = 1
   kit.continuous_servo[front_left360].throttle = -1
   kit.continuous_servo[middle_right360].throttle = 1
