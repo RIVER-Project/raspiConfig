@@ -39,7 +39,7 @@ def controlM(a):
  kit.servo[a].angle = 90
  time.sleep(0.5)
 
-def forwardFull():
+def forwardFull(key):
 
  while key.char == ('w'):
   kit.continuous_servo[front_right360].throttle = 1
