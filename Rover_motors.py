@@ -40,12 +40,14 @@ def controlM(a):
  time.sleep(0.5)
 
 def forwardFull():
-  kit.continuous_servo[front_right360].throttle = 1
-  kit.continuous_servo[front_left360].throttle = -1
-  kit.continuous_servo[middle_right360].throttle = 1
-  kit.continuous_servo[middle_left360].throttle = -1
-  kit.continuous_servo[rear_right360].throttle = 1
-  kit.continuous_servo[rear_left360].throttle = -1
+ while True:
+  if keyboard.read_key() == "w":
+      kit.continuous_servo[front_right360].throttle = 1
+      kit.continuous_servo[front_left360].throttle = -1
+      kit.continuous_servo[middle_right360].throttle = 1
+      kit.continuous_servo[middle_left360].throttle = -1
+      kit.continuous_servo[rear_right360].throttle = 1
+      kit.continuous_servo[rear_left360].throttle = -1
 
 def forwardHalf():
  kit.continuous_servo[front_right360].throttle = 0.5
