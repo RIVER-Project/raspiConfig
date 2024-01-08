@@ -87,6 +87,7 @@ def steer(angle):
      kit.servo[front_right180].angle = angle
      kit.servo[front_left180].angle = angle
 
+
 def main():
  while True:
   try:
@@ -99,6 +100,7 @@ def main():
         exitSteer = int(input("\nPress 9 to continue or any other key to exit steering mode\n"))
         angle = int(input("Choose angle: "))
         steer(angle)
+    reverseKrab()
    elif choice == 3:
     forwardHalf()
    elif choice == 4:
