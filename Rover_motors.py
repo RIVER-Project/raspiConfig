@@ -84,6 +84,7 @@ def circles():
  kit.servo[front_right360] = 125
 
 def steer(angle):
+    stopRover()
      kit.servo[front_right180].angle = angle
      kit.servo[front_left180].angle = angle
 
@@ -95,15 +96,8 @@ def main():
    if choice == 1:
     forwardFull()
    elif choice == 2:
-    exitSteer = 1;
-    while exitSteer == 1:
         angle = int(input("Choose angle: "))
         steer(angle)
-        exitSteer = int(input("\nPress 1 to continue or 9 to exit steering mode\n"))
-        if exitSteer == 9:
-            for i in range(6, 12):
-                kit.servo[i].angle = 90
-
    elif choice == 3:
     forwardHalf()
    elif choice == 4:
