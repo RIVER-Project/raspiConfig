@@ -87,6 +87,7 @@ def steer(angle):
      stopRover()
      kit.servo[front_right180].angle = angle
      kit.servo[front_left180].angle = angle
+     stopRover()
 
 
 def main():
