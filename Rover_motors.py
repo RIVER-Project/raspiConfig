@@ -95,7 +95,7 @@ def main():
    if choice == 1:
     forwardFull()
    elif choice == 2:
-       stopRover()
+        stopRover()
         angle = int(input("Choose angle: "))
         steer(angle)
    elif choice == 3:
