@@ -84,7 +84,7 @@ def circles():
  kit.servo[front_right360] = 125
 
 def steer(angle):
-    stopRover()
+     stopRover()
      kit.servo[front_right180].angle = angle
      kit.servo[front_left180].angle = angle
 
