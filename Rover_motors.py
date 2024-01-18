@@ -87,11 +87,21 @@ def steer(angle):
      kit.servo[front_right180].angle = angle
      kit.servo[front_left180].angle = angle
 
+def rotateRight():
+    kit.servo[front_right180].angle = 135
+    kit.servo[front_left180].angle = 135
+    kit.servo[rear_right180].angle = 45
+    kit.servo[rear_left180].angle = 45
+    kit.continuous_servo[front_right360].throttle = 1
+    kit.continuous_servo[front_left360].throttle = -1
+    kit.continuous_servo[rear_right360].throttle = 1
+    kit.continuous_servo[rear_left360].throttle = -1
+
 
 def main():
  while True:
   try:
-   choice = int(input("Option:\n1 Forward full\n2.Steer(angle)\n3.Forward Half\n4.Krab walk\n5.Reverse krab\n6.Backward\n7.Stop\n"))
+   choice = int(input("Option:\n1 Forward full\n2.Steer(angle)\n3.Forward Half\n4.Krab walk\n5.Reverse krab\n6.Backward\n7.Rotate right\n8.Stop\n"))
    if choice == 1:
     forwardFull()
    elif choice == 2:
@@ -107,6 +117,8 @@ def main():
    elif choice == 6:
     backWard()
    elif choice == 7:
+    rotateRight()
+   elif choice == 8:
     stopRover()
    else:
     print("Exiting the program.")
