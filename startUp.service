@@ -1,0 +1,18 @@
+[Unit]
+Description=My Sample Service
+After=multi-user.target
+
+[Service]
+Type=idle
+ExecStart=/home/raspi/bin/startUpScript.sh
+Restart=on-failure
+RestartSec=10
+KillMode=process
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=MyScriptOnStartUp
+User=root
+Group=root
+
+[Install]
+WantedBy=multi-user.target
