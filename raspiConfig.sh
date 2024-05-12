@@ -27,7 +27,7 @@ git config --global user.name $username
 read -p "Enter git email: " email
 git config --global user.email $email
 
-git clone https://github.com/mateisorodoc/Rover.git
+git clone https://github.com/RIVER-Project/ExoMyRover.git
 
 sudo systemctl daemon-reload
 sudo systemctl enable startUp
